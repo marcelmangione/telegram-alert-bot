@@ -4,7 +4,7 @@ from telethon.sync import TelegramClient, events
 
 # ⚠️ Força os valores a virem como string
 api_id = os.environ.get("API_ID", "0")
-api_hash = os.environ.get("API_HASH", "")
+api_hash = str(os.environ.get("API_HASH", ""))
 bot_token = os.environ.get("BOT_TOKEN", "")
 chat_id = os.environ.get("CHAT_ID", "")
 
