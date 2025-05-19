@@ -4,6 +4,9 @@ from telethon.sessions import StringSession
 import os
 import requests
 
+print("API_ID:", os.environ.get("API_ID"))
+print("API_HASH:", os.environ.get("API_HASH"))
+
 # Carrega variáveis do Railway
 api_id = int(os.environ.get("API_ID", "0"))
 api_hash = str(os.environ.get("API_HASH", ""))
