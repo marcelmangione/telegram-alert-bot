@@ -1,12 +1,15 @@
-from telethon.sync import TelegramClient, events
 import os
 import requests
+from telethon.sync import TelegramClient, events
 
-# Load environment variables from Railway
-api_id = int(os.environ.get("API_ID"))
-api_hash = os.environ.get("API_HASH")
-bot_token = os.environ.get("BOT_TOKEN")
-chat_id = os.environ.get("CHAT_ID")
+# ⚠️ Força os valores a virem como string
+api_id = os.environ.get("API_ID", "0")
+api_hash = os.environ.get("API_HASH", "")
+bot_token = os.environ.get("BOT_TOKEN", "")
+chat_id = os.environ.get("CHAT_ID", "")
+
+# ⚠️ Converte api_id para número
+api_id = int(api_id)
 
 # Keywords and channel to monitor
 keywords = ['AGE: 0.00d', 'AGE: 0.01d']
