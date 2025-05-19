@@ -1,4 +1,3 @@
-
 from telethon.sync import TelegramClient, events
 from telethon.sessions import StringSession
 import os
